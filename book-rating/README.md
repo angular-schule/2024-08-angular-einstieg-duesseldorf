@@ -1,27 +1,104 @@
-# BookRating
+<img src="https://assets.angular.schule/header-tagesworkshop-einstieg.png">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+#### **mit Ferdinand Malcher**
 
-## Development server
+<hr>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Herzlich Willkommen zum Workshop – schön, dass du dabei bist!**  
+In diesem Repository findest du während des Workshops den Quelltext unserer Beispielanwendung.
 
-## Code scaffolding
+# ⚡️ Quick Start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Wenn du schon alle benötigte Software installiert hast, musst Du nur noch das Projekt installieren und starten.
+Klone dazu dieses GitHub-Repository. Danach im Projektverzeichnis:
 
-## Build
+```bash
+npm install
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# ✅ Installation (ausführlich)
 
-## Running end-to-end tests
+> ⚠️ **Bitte führe die Vorbereitung rechtzeitig VOR dem Workshop aus, damit wir ohne Zeitverlust loslegen können.**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Benötigte Software
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. **Node.js 18, 20 oder 22** (jeweils die aktuelle Nebenversionsnummer): [https://nodejs.org](https://nodejs.org)
+   + (Mac-User sollten ggf. Homebrew verwenden, [siehe Anleitung](https://presentations.angular.schule/HOMEBREW_NODE).)
+2. **Google Chrome:** [https://www.google.com/chrome/](https://www.google.com/chrome/)
+3. **Visual Studio Code:** [https://code.visualstudio.com](https://code.visualstudio.com)
+4. **Angular Language Service für VS Code:** [Angular Language Service (`Angular.ng-template`)](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+    - Installiere die Extension über den *Extensions Browser* direkt im Editor.
+
+
+## Pakete installieren
+
+Die Angular CLI ist das offizielle Build-Tool für Angular. Mit folgendem Befehl kannst Du die CLI auf dem System installieren:
+
+```
+npm install -g @angular/cli
+```
+
+⚠️ Überprüfe bitte anschließend die Versionen, damit wir beim Workshop alle auf dem gleichen Stand sind.
+
+```
+node -v
+> Erwartet: 18.9.1 oder höher, aber nicht 19.x oder 21.x!
+
+npm -v
+> Erwartet: 6.x oder höher
+
+ng version
+> Erwartet: 18.x.x oder höher
+```
+
+
+## Projekt installieren
+
+Wir haben bereits ein Projekt vorbereitet, mit dem wir im Workshop arbeiten werden.
+Bitte klone dieses Repo *oder* [lade den Code als ZIP herunter](https://github.com/angular-schule/2024-08-angular-einstieg-duesseldorf/archive/refs/heads/main.zip).
+
+Anschließend kannst Du das Angular-Projekt auf deinem Rechner installieren:
+
+```bash
+cd 2024-08-angular-einstieg-duesseldorf
+npm install
+```
+
+Die Installation kann bei langsamer Internetverbindung sehr lange dauern.
+Warte das `npm install` mit Geduld ab!
+
+Anschließend kannst du das Projekt starten:
+
+```bash
+ng serve
+```
+
+Auf http://localhost:4200 sollte nun die Anwendung mit der Überschrift "Hello world" erscheinen.
+Den laufenden Webserver kannst Du danach mit Strg + C beenden.
+
+Wenn bei allen Teilnehmenden das Grundgerüst steht, können wir ohne Zeitverlust loslegen.
+Sollte es zu einem Fehler kommen, melde dich einfach per Mail bei uns unter [team@angular.schule](mailto:team@angular.schule).  
+Wir werden schnell eine Lösung finden.
+
+## Projekt erforschen
+
+Öffne den Projektordner `book-rating` in deinem Editor.
+Nimm dir nun ein paar Minuten Zeit, um die Struktur des generierten Projekts zu untersuchen.
+So hast du die wichtigsten Dateien schon einmal gesehen, bevor wir den Aufbau in der Schulung besprechen!
+
+
+
+### Wir freuen uns schon! 🙂
+
+<hr>
+
+<img src="http://assets.angular.schule/logo-angular-schule.png" height="60">
+
+### &copy; https://angular.schule | Stand: 02.08.2024
+
+
+
