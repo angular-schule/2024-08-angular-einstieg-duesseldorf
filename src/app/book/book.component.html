@@ -11,6 +11,8 @@
       </div>
       <p>{{ book.description }}</p>
       <p><strong>Preis:</strong> {{ book.price | currency:'EUR' }}</p>
+
+      <button type="button" class="btn btn-green" (click)="addToCart()">🛒 Add to cart</button>
     </div>
   </div>
   }
