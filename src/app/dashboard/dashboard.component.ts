@@ -46,7 +46,8 @@ export class DashboardComponent {
 
 
   addToCart(book: Book) {
-    this.cart.push(book); // !!!
+    // this.cart.push(book); // !!!
+    this.cart = [...this.cart, book];
   }
 }
 
