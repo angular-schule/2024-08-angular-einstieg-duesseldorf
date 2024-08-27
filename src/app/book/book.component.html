@@ -13,6 +13,16 @@
       <p><strong>Preis:</strong> {{ book.price | euro }}</p>
 
       <button type="button" class="btn btn-green" (click)="addToCart()">🛒 Add to cart</button>
+
+      <a class="btn btn-warning" [routerLink]="['/books', 'details', book.isbn]">Details</a>
+
+      <!--
+      <a routerLink="/books/dashboard">Details</a>
+      <a [routerLink]="'/books/details/' + book.isbn">Details</a>
+      <a routerLink="/books/details/{{ book.isbn }}">Details</a>
+
+      <a [routerLink]="['..', 'details', book.isbn]">Details</a>
+      <a [routerLink]="'../details' + book.isbn">Details</a>-->
     </div>
   </div>
   }

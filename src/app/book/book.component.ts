@@ -2,11 +2,12 @@ import { Component, EventEmitter, input, Input, output, Output } from '@angular/
 import { Book } from '../shared/book';
 import { CurrencyPipe } from '@angular/common';
 import { EuroPipe } from '../euro.pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-book',
   standalone: true,
-  imports: [EuroPipe],
+  imports: [EuroPipe, RouterLink],
   templateUrl: './book.component.html',
   styleUrl: './book.component.scss'
 })

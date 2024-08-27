@@ -1,0 +1,9 @@
+@if (book(); as book) {
+  <h2>{{ book.title }}</h2>
+  <p>{{ book.description }}</p>
+}
+
+<hr>
+
+<!--<a [routerLink]="['/books', 'dashboard']">Zum Dashboard</a>-->
+<a routerLink="/books/dashboard">Zum Dashboard</a>
