@@ -3,6 +3,7 @@ import { Book } from '../shared/book';
 import { BookComponent } from '../book/book.component';
 import { CartDisplayComponent } from '../cart-display/cart-display.component';
 import { BookStoreService } from '../shared/book-store.service';
+import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,16 +13,18 @@ import { BookStoreService } from '../shared/book-store.service';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  books = signal<Book[]>([]);
-  cart = signal<Book[]>([]);
-
   private bs = inject(BookStoreService);
 
+  // books = signal<Book[]>([]);
+  books = toSignal(this.bs.getAll());
+  cart = signal<Book[]>([]);
+
+
   constructor() {
-    this.bs.getAll().subscribe(books => {
+    /*this.bs.getAll().subscribe(books => {
       // this.books = books;
       this.books.set(books);
-    })
+    })*/
   }
 
 
