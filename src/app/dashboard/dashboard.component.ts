@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Book } from '../shared/book';
 import { BookComponent } from '../book/book.component';
 import { CartDisplayComponent } from '../cart-display/cart-display.component';
+import { BookStoreService } from '../shared/book-store.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,6 +14,8 @@ import { CartDisplayComponent } from '../cart-display/cart-display.component';
 export class DashboardComponent {
   books = signal<Book[]>([]);
   cart = signal<Book[]>([]);
+
+  private bs = inject(BookStoreService);
 
   constructor() {
     this.books.set([
