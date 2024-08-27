@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Book } from '../shared/book';
 import { BookComponent } from '../book/book.component';
 import { CartDisplayComponent } from '../cart-display/cart-display.component';
@@ -11,12 +11,11 @@ import { CartDisplayComponent } from '../cart-display/cart-display.component';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
-  books: Book[] = [];
-
-  cart: Book[] = [];
+  books = signal<Book[]>([]);
+  cart = signal<Book[]>([]);
 
   constructor() {
-    this.books = [
+    this.books.set([
       {
         isbn: '12345',
         title: 'Angular',
@@ -41,13 +40,16 @@ export class DashboardComponent {
         price: 29.9,
         firstThumbnailUrl: 'https://api.angular.schule/avatar/4',
       },
-    ]
+    ]);
   }
 
 
   addToCart(book: Book) {
     // this.cart.push(book); // !!!
-    this.cart = [...this.cart, book];
+    // this.cart = [...this.cart, book];
+
+    this.cart.update(currentCart => [...currentCart, book]);
+    // this.cart.set([...this.cart(), book]);
   }
 }
 
